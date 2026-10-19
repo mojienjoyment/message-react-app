@@ -103,3 +103,79 @@ a.back:hover {
   color: #6b7280;
   font-style: italic;
 }
+/* Name page form & greeting */
+.name-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.name-form label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.name-form .form-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+  max-width: 360px;
+}
+
+.name-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.name-form input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.name-form button {
+  padding: 10px 20px;
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.name-form button:hover {
+  background: #4338ca;
+}
+
+.greeting-box {
+  margin: 32px 0;
+}
+
+.greeting {
+  font-size: 1.6rem;
+  color: #111827;
+}
+
+.change-btn {
+  background: none;
+  border: 1px solid #d1d5db;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font: inherit;
+  color: #4b5563;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.change-btn:hover {
+  background: #f3f4f6;
+}
