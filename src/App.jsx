@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Data from "./pages/Data.jsx";
 import Name from "./pages/Name.jsx";
 
 function App() {
-  const [page, setPage] = useState("home");
-
   return (
-    <div>
-      {page === "home" && <Home onNavigate={setPage} />}
-      {page === "data" && <Data onNavigate={setPage} />}
-      {page === "name" && <Name onNavigate={setPage} />}
-    </div>
+    <MemoryRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/data" element={<Data />} />
+        <Route path="/name" element={<Name />} />
+      </Routes>
+    </MemoryRouter>
   );
 }
 
