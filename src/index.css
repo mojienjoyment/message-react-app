@@ -62,3 +62,44 @@ a.back {
 a.back:hover {
   text-decoration: underline;
 }
+/* Table styles */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px auto;
+  text-align: left;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  width: 120px;
+  vertical-align: top;
+}
+
+.data-table td {
+  color: #1f2937;
+}
+
+.data-table tr:last-child th,
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table .geo,
+.data-table .bs {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-style: italic;
+}
