@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
-
-function Name() {
+function Name({ onNavigate }) {
   return (
-    <div>
+    <>
       <h1>Name Page</h1>
       <p>This is the name page.</p>
-      <Link to="/">back to home</Link>
-    </div>
+      <button className="back" onClick={() => onNavigate("home")}>
+        back to home
+      </button>
+    </>
   );
 }
 

@@ -1,17 +1,17 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Data from "./pages/Data";
-import Name from "./pages/Name";
+import { useState } from "react";
+import Home from "./pages/Home.jsx";
+import Data from "./pages/Data.jsx";
+import Name from "./pages/Name.jsx";
 
 function App() {
+  const [page, setPage] = useState("home");
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/data" element={<Data />} />
-        <Route path="/name" element={<Name />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      {page === "home" && <Home onNavigate={setPage} />}
+      {page === "data" && <Data onNavigate={setPage} />}
+      {page === "name" && <Name onNavigate={setPage} />}
+    </div>
   );
 }
 

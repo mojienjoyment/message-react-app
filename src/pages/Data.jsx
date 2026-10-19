@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
-
-function Data() {
+function Data({ onNavigate }) {
   return (
-    <div>
+    <>
       <h1>Data Page</h1>
       <p>This is the data page.</p>
-      <Link to="/">back to home</Link>
-    </div>
+      <button className="back" onClick={() => onNavigate("home")}>
+        back to home
+      </button>
+    </>
   );
 }
 

@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom";
-
-function Home() {
+function Home({ onNavigate }) {
   return (
-    <div>
+    <>
       <h1>welcome to SPA</h1>
       <nav>
         <ul>
-          <li><Link to="/data">data</Link></li>
-          <li><Link to="/name">name</Link></li>
+          <li><button onClick={() => onNavigate("data")}>data</button></li>
+          <li><button onClick={() => onNavigate("name")}>name</button></li>
         </ul>
       </nav>
-    </div>
+    </>
   );
 }
 
